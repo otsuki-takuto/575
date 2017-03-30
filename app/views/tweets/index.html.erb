@@ -1,0 +1,41 @@
+<div class="setumei">
+  <p>俳句とは</p>
+</div>
+
+<div class="test">
+  <p>表で勉強リスト作成</p>
+  <li><a href="http://www.doctor-senryu.com/01_museum/0_senryu-haiku.html" >俳句と川柳の違い</a></li>
+  <li><a href="wwww"></a>test</li>
+</div>
+
+<div class="contents row">
+<p><ユーザーの5 7 5></p>
+  <% @tweets.each do |tweet| %>
+    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <% if user_signed_in? && current_user.id == tweet.user_id %>
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <ul class="more_list">
+            <li>
+              <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %>
+            </li>
+            <% if user_signed_in? && current_user.id == tweet.user_id %>
+              <li>
+                <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <%= tweet.text %></br>
+        <%= tweet.text2 %></br>
+        <%= tweet.text3 %>
+      <span class="name">
+        <a href="/users/<%= tweet.user_id %>">
+          <span>投稿者</span><%= tweet.user.nickname %>
+        </a>
+      </span>
+    </div>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
