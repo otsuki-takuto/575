@@ -52,3 +52,7 @@ gem 'kaminari'
 gem 'devise'
 gem 'carrierwave'
 
+group :production do
+  gem 'rails_12factor'
+end
+
