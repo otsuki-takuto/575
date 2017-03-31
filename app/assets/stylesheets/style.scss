@@ -230,7 +230,7 @@ div.contents.row {
     position: relative;
     height: 200px;
     width: 200px;
-    color: #fff;
+    color: #ffc0cb;
     background-size: cover;
     background-position: center center;
     border-radius: 3px;
@@ -372,25 +372,28 @@ footer {
 }
 
 .setumei{
-  height: 400px;
+  height: 250px;
   width: 960px;
-  background-color: #C0C0C0;
+  /*background-color: #C0C0C0;*/
   text-align: center;
   margin: 0 auto;
+  font-size: 25px;
 }
 
 .test{
   text-align: center;
-background-color: gray;
-  height: 400px;
+  /*background-color: gray;*/
+  height: 250px;
   width: 960px;
   margin: 0 auto;
+  font-size: 25px;
+  /*color: #fff;*/
 }
 
 .content_test{
   position: relative;
     height: 400px;
-    color: #fff;
+    color: #ffc0cb;
     background-size: cover;
     background-position: center center;
     border-radius: 3px;
@@ -434,4 +437,10 @@ background-color: gray;
          }
        }
      }
+   }
+
+   .photo{
+    max-width: 50%;
+  background-color: #eee8aa;
+  margin: 0 auto;
    }
